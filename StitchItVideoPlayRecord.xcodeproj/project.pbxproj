@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E0F777E31E96FAB50071570B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F777E21E96FAB50071570B /* AppDelegate.swift */; };
+		E0F777E51E96FAB50071570B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F777E41E96FAB50071570B /* ViewController.swift */; };
+		E0F777E81E96FAB50071570B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F777E61E96FAB50071570B /* Main.storyboard */; };
+		E0F777EA1E96FAB50071570B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0F777E91E96FAB50071570B /* Assets.xcassets */; };
+		E0F777ED1E96FAB50071570B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F777EB1E96FAB50071570B /* LaunchScreen.storyboard */; };
+		E0F777F81E96FAB50071570B /* StitchItVideoPlayRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F777F71E96FAB50071570B /* StitchItVideoPlayRecordTests.swift */; };
+		E0F778031E96FAB50071570B /* StitchItVideoPlayRecordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F778021E96FAB50071570B /* StitchItVideoPlayRecordUITests.swift */; };
+		E0F778171E96FB310071570B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F778111E96FB310071570B /* AssetsLibrary.framework */; };
+		E0F778181E96FB310071570B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F778121E96FB310071570B /* AVFoundation.framework */; };
+		E0F778191E96FB310071570B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F778131E96FB310071570B /* CoreMedia.framework */; };
+		E0F7781A1E96FB310071570B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F778141E96FB310071570B /* MediaPlayer.framework */; };
+		E0F7781B1E96FB310071570B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F778151E96FB310071570B /* MobileCoreServices.framework */; };
+		E0F7781C1E96FB310071570B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F778161E96FB310071570B /* QuartzCore.framework */; };
+		E0F7781E1E9701740071570B /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F7781D1E9701740071570B /* PlayVideoViewController.swift */; };
+		E0F778201E9701B80071570B /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F7781F1E9701B80071570B /* RecordVideoViewController.swift */; };
+		E0F778221E9701D20071570B /* MergeVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F778211E9701D20071570B /* MergeVideoViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0F777F41E96FAB50071570B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0F777D71E96FAB40071570B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0F777DE1E96FAB50071570B;
+			remoteInfo = StitchItVideoPlayRecord;
+		};
+		E0F777FF1E96FAB50071570B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0F777D71E96FAB40071570B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0F777DE1E96FAB50071570B;
+			remoteInfo = StitchItVideoPlayRecord;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E0F777DF1E96FAB50071570B /* StitchItVideoPlayRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StitchItVideoPlayRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0F777E21E96FAB50071570B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E0F777E41E96FAB50071570B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0F777E71E96FAB50071570B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0F777E91E96FAB50071570B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E0F777EC1E96FAB50071570B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E0F777EE1E96FAB50071570B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0F777F31E96FAB50071570B /* StitchItVideoPlayRecordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StitchItVideoPlayRecordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0F777F71E96FAB50071570B /* StitchItVideoPlayRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StitchItVideoPlayRecordTests.swift; sourceTree = "<group>"; };
+		E0F777F91E96FAB50071570B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0F777FE1E96FAB50071570B /* StitchItVideoPlayRecordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StitchItVideoPlayRecordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0F778021E96FAB50071570B /* StitchItVideoPlayRecordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StitchItVideoPlayRecordUITests.swift; sourceTree = "<group>"; };
+		E0F778041E96FAB50071570B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0F778111E96FB310071570B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		E0F778121E96FB310071570B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E0F778131E96FB310071570B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E0F778141E96FB310071570B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E0F778151E96FB310071570B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E0F778161E96FB310071570B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E0F7781D1E9701740071570B /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
+		E0F7781F1E9701B80071570B /* RecordVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
+		E0F778211E9701D20071570B /* MergeVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeVideoViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0F777DC1E96FAB50071570B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0F778171E96FB310071570B /* AssetsLibrary.framework in Frameworks */,
+				E0F778181E96FB310071570B /* AVFoundation.framework in Frameworks */,
+				E0F778191E96FB310071570B /* CoreMedia.framework in Frameworks */,
+				E0F7781A1E96FB310071570B /* MediaPlayer.framework in Frameworks */,
+				E0F7781B1E96FB310071570B /* MobileCoreServices.framework in Frameworks */,
+				E0F7781C1E96FB310071570B /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0F777F01E96FAB50071570B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0F777FB1E96FAB50071570B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E0F777D61E96FAB40071570B = {
+			isa = PBXGroup;
+			children = (
+				E0F777E11E96FAB50071570B /* StitchItVideoPlayRecord */,
+				E0F777F61E96FAB50071570B /* StitchItVideoPlayRecordTests */,
+				E0F778011E96FAB50071570B /* StitchItVideoPlayRecordUITests */,
+				E0F777E01E96FAB50071570B /* Products */,
+				E0F778101E96FB310071570B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E0F777E01E96FAB50071570B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0F777DF1E96FAB50071570B /* StitchItVideoPlayRecord.app */,
+				E0F777F31E96FAB50071570B /* StitchItVideoPlayRecordTests.xctest */,
+				E0F777FE1E96FAB50071570B /* StitchItVideoPlayRecordUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0F777E11E96FAB50071570B /* StitchItVideoPlayRecord */ = {
+			isa = PBXGroup;
+			children = (
+				E0F777E21E96FAB50071570B /* AppDelegate.swift */,
+				E0F777E41E96FAB50071570B /* ViewController.swift */,
+				E0F777E61E96FAB50071570B /* Main.storyboard */,
+				E0F7781F1E9701B80071570B /* RecordVideoViewController.swift */,
+				E0F778211E9701D20071570B /* MergeVideoViewController.swift */,
+				E0F7781D1E9701740071570B /* PlayVideoViewController.swift */,
+				E0F777E91E96FAB50071570B /* Assets.xcassets */,
+				E0F777EB1E96FAB50071570B /* LaunchScreen.storyboard */,
+				E0F777EE1E96FAB50071570B /* Info.plist */,
+			);
+			path = StitchItVideoPlayRecord;
+			sourceTree = "<group>";
+		};
+		E0F777F61E96FAB50071570B /* StitchItVideoPlayRecordTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0F777F71E96FAB50071570B /* StitchItVideoPlayRecordTests.swift */,
+				E0F777F91E96FAB50071570B /* Info.plist */,
+			);
+			path = StitchItVideoPlayRecordTests;
+			sourceTree = "<group>";
+		};
+		E0F778011E96FAB50071570B /* StitchItVideoPlayRecordUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E0F778021E96FAB50071570B /* StitchItVideoPlayRecordUITests.swift */,
+				E0F778041E96FAB50071570B /* Info.plist */,
+			);
+			path = StitchItVideoPlayRecordUITests;
+			sourceTree = "<group>";
+		};
+		E0F778101E96FB310071570B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0F778111E96FB310071570B /* AssetsLibrary.framework */,
+				E0F778121E96FB310071570B /* AVFoundation.framework */,
+				E0F778131E96FB310071570B /* CoreMedia.framework */,
+				E0F778141E96FB310071570B /* MediaPlayer.framework */,
+				E0F778151E96FB310071570B /* MobileCoreServices.framework */,
+				E0F778161E96FB310071570B /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0F777DE1E96FAB50071570B /* StitchItVideoPlayRecord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0F778071E96FAB50071570B /* Build configuration list for PBXNativeTarget "StitchItVideoPlayRecord" */;
+			buildPhases = (
+				E0F777DB1E96FAB50071570B /* Sources */,
+				E0F777DC1E96FAB50071570B /* Frameworks */,
+				E0F777DD1E96FAB50071570B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StitchItVideoPlayRecord;
+			productName = StitchItVideoPlayRecord;
+			productReference = E0F777DF1E96FAB50071570B /* StitchItVideoPlayRecord.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E0F777F21E96FAB50071570B /* StitchItVideoPlayRecordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0F7780A1E96FAB50071570B /* Build configuration list for PBXNativeTarget "StitchItVideoPlayRecordTests" */;
+			buildPhases = (
+				E0F777EF1E96FAB50071570B /* Sources */,
+				E0F777F01E96FAB50071570B /* Frameworks */,
+				E0F777F11E96FAB50071570B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0F777F51E96FAB50071570B /* PBXTargetDependency */,
+			);
+			name = StitchItVideoPlayRecordTests;
+			productName = StitchItVideoPlayRecordTests;
+			productReference = E0F777F31E96FAB50071570B /* StitchItVideoPlayRecordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E0F777FD1E96FAB50071570B /* StitchItVideoPlayRecordUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0F7780D1E96FAB50071570B /* Build configuration list for PBXNativeTarget "StitchItVideoPlayRecordUITests" */;
+			buildPhases = (
+				E0F777FA1E96FAB50071570B /* Sources */,
+				E0F777FB1E96FAB50071570B /* Frameworks */,
+				E0F777FC1E96FAB50071570B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0F778001E96FAB50071570B /* PBXTargetDependency */,
+			);
+			name = StitchItVideoPlayRecordUITests;
+			productName = StitchItVideoPlayRecordUITests;
+			productReference = E0F777FE1E96FAB50071570B /* StitchItVideoPlayRecordUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0F777D71E96FAB40071570B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Natalie Cervantes";
+				TargetAttributes = {
+					E0F777DE1E96FAB50071570B = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = P5Z6DCXVRG;
+						ProvisioningStyle = Automatic;
+					};
+					E0F777F21E96FAB50071570B = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = P5Z6DCXVRG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E0F777DE1E96FAB50071570B;
+					};
+					E0F777FD1E96FAB50071570B = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = P5Z6DCXVRG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E0F777DE1E96FAB50071570B;
+					};
+				};
+			};
+			buildConfigurationList = E0F777DA1E96FAB40071570B /* Build configuration list for PBXProject "StitchItVideoPlayRecord" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E0F777D61E96FAB40071570B;
+			productRefGroup = E0F777E01E96FAB50071570B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0F777DE1E96FAB50071570B /* StitchItVideoPlayRecord */,
+				E0F777F21E96FAB50071570B /* StitchItVideoPlayRecordTests */,
+				E0F777FD1E96FAB50071570B /* StitchItVideoPlayRecordUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0F777DD1E96FAB50071570B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0F777ED1E96FAB50071570B /* LaunchScreen.storyboard in Resources */,
+				E0F777EA1E96FAB50071570B /* Assets.xcassets in Resources */,
+				E0F777E81E96FAB50071570B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0F777F11E96FAB50071570B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0F777FC1E96FAB50071570B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0F777DB1E96FAB50071570B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0F777E51E96FAB50071570B /* ViewController.swift in Sources */,
+				E0F778221E9701D20071570B /* MergeVideoViewController.swift in Sources */,
+				E0F777E31E96FAB50071570B /* AppDelegate.swift in Sources */,
+				E0F7781E1E9701740071570B /* PlayVideoViewController.swift in Sources */,
+				E0F778201E9701B80071570B /* RecordVideoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0F777EF1E96FAB50071570B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0F777F81E96FAB50071570B /* StitchItVideoPlayRecordTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0F777FA1E96FAB50071570B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0F778031E96FAB50071570B /* StitchItVideoPlayRecordUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0F777F51E96FAB50071570B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0F777DE1E96FAB50071570B /* StitchItVideoPlayRecord */;
+			targetProxy = E0F777F41E96FAB50071570B /* PBXContainerItemProxy */;
+		};
+		E0F778001E96FAB50071570B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0F777DE1E96FAB50071570B /* StitchItVideoPlayRecord */;
+			targetProxy = E0F777FF1E96FAB50071570B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E0F777E61E96FAB50071570B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0F777E71E96FAB50071570B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E0F777EB1E96FAB50071570B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0F777EC1E96FAB50071570B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0F778051E96FAB50071570B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E0F778061E96FAB50071570B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0F778081E96FAB50071570B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P5Z6DCXVRG;
+				INFOPLIST_FILE = StitchItVideoPlayRecord/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stitchitmedia.StitchItVideoPlayRecord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E0F778091E96FAB50071570B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P5Z6DCXVRG;
+				INFOPLIST_FILE = StitchItVideoPlayRecord/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stitchitmedia.StitchItVideoPlayRecord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E0F7780B1E96FAB50071570B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P5Z6DCXVRG;
+				INFOPLIST_FILE = StitchItVideoPlayRecordTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stitchitmedia.StitchItVideoPlayRecordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StitchItVideoPlayRecord.app/StitchItVideoPlayRecord";
+			};
+			name = Debug;
+		};
+		E0F7780C1E96FAB50071570B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P5Z6DCXVRG;
+				INFOPLIST_FILE = StitchItVideoPlayRecordTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stitchitmedia.StitchItVideoPlayRecordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StitchItVideoPlayRecord.app/StitchItVideoPlayRecord";
+			};
+			name = Release;
+		};
+		E0F7780E1E96FAB50071570B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = P5Z6DCXVRG;
+				INFOPLIST_FILE = StitchItVideoPlayRecordUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stitchitmedia.StitchItVideoPlayRecordUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = StitchItVideoPlayRecord;
+			};
+			name = Debug;
+		};
+		E0F7780F1E96FAB50071570B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = P5Z6DCXVRG;
+				INFOPLIST_FILE = StitchItVideoPlayRecordUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stitchitmedia.StitchItVideoPlayRecordUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = StitchItVideoPlayRecord;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0F777DA1E96FAB40071570B /* Build configuration list for PBXProject "StitchItVideoPlayRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0F778051E96FAB50071570B /* Debug */,
+				E0F778061E96FAB50071570B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0F778071E96FAB50071570B /* Build configuration list for PBXNativeTarget "StitchItVideoPlayRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0F778081E96FAB50071570B /* Debug */,
+				E0F778091E96FAB50071570B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E0F7780A1E96FAB50071570B /* Build configuration list for PBXNativeTarget "StitchItVideoPlayRecordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0F7780B1E96FAB50071570B /* Debug */,
+				E0F7780C1E96FAB50071570B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E0F7780D1E96FAB50071570B /* Build configuration list for PBXNativeTarget "StitchItVideoPlayRecordUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0F7780E1E96FAB50071570B /* Debug */,
+				E0F7780F1E96FAB50071570B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0F777D71E96FAB40071570B /* Project object */;
+}
