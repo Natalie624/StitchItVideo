@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Video View Controller-->
         <scene sceneID="QhV-Xu-6Id">
             <objects>
-                <viewController id="NCY-rA-abp" sceneMemberID="viewController">
+                <viewController id="NCY-rA-abp" customClass="PlayVideoViewController" customModule="StitchItVideoPlayRecord" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FHN-wN-l8i"/>
                         <viewControllerLayoutGuide type="bottom" id="7X9-T6-MDD"/>
@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="1532" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Merge Video View Controller-->
         <scene sceneID="dW9-rP-VVR">
             <objects>
-                <viewController id="SrF-VX-lSd" sceneMemberID="viewController">
+                <viewController id="SrF-VX-lSd" customClass="MergeVideoViewController" customModule="StitchItVideoPlayRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yFY-Gh-xSR"/>
                         <viewControllerLayoutGuide type="bottom" id="jek-J8-yZY"/>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="1935" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--Record Video View Controller-->
         <scene sceneID="FFh-3O-e68">
             <objects>
-                <viewController id="yd2-5Y-SKm" sceneMemberID="viewController">
+                <viewController id="yd2-5Y-SKm" customClass="RecordVideoViewController" customModule="StitchItVideoPlayRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3bO-6E-wSz"/>
                         <viewControllerLayoutGuide type="bottom" id="KUU-3E-esp"/>
