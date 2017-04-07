@@ -10,7 +10,9 @@ import UIKit
 import MobileCoreServices
 import MediaPlayer
 
-class PlayVideoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PlayVideoViewController: UIViewController {
+
+    
 
     @IBAction func playVideo(_ sender: Any) {
     }
@@ -35,5 +37,17 @@ class PlayVideoViewController: UIViewController, UIImagePickerControllerDelegate
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
 }
+//The below extensions set up PlayVideoViewController to adopt the UIImagePickerControllerDelegate and UINavigationControllerDelevate protocols.
+//MARK: - UIImagePickerControlDelegate
+extension PlayVideoViewController: UIImagePickerControllerDelegate {
+    
+}
+
+//MARK: - UINavigationControllerDelegate
+extension PlayVideoViewController: UINavigationControllerDelegate {
+    
+}
+
