@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import MobileCoreServices
+import MediaPlayer
 
-class PlayVideoViewController: UIViewController {
+class PlayVideoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBAction func playVideo(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
