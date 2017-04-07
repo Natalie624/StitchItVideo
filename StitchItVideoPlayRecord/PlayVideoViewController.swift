@@ -12,7 +12,23 @@ import MediaPlayer
 
 class PlayVideoViewController: UIViewController {
 
-    
+    func startMediaBrowserFromViewController(viewController: UIViewController, usingDelegate delegate:UINavigationControllerDelegate & UIImagePickerControllerDelegate) -> Bool {
+        //1
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) == false {
+            return false
+        }
+        
+        //2
+        var mediaUI = UIImagePickerController()
+        mediaUI.sourceType = .savedPhotosAlbum
+        mediaUI.mediaTypes = [kUTTypeMovie as NSString as String]
+        mediaUI.allowsEditing = true
+        mediaUI.delegate = delegate
+        
+        //3
+        present(mediaUI, animated: true, completion: nil)
+        return true
+    }
 
     @IBAction func playVideo(_ sender: Any) {
     }
