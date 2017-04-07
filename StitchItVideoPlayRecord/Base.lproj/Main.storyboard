@@ -22,19 +22,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXY-cg-1TZ">
-                                <rect key="frame" x="113" y="139" width="149" height="30"/>
+                                <rect key="frame" x="113" y="142" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Select and Play Video"/>
+                                <connections>
+                                    <segue destination="NCY-rA-abp" kind="show" id="A66-Bt-GDR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJr-Nf-OaZ">
-                                <rect key="frame" x="108" y="220" width="159" height="30"/>
+                                <rect key="frame" x="108" y="210" width="159" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Record and Save Video"/>
+                                <connections>
+                                    <segue destination="yd2-5Y-SKm" kind="show" id="8Im-EL-wpc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1X-Ws-2Nh">
-                                <rect key="frame" x="145" y="300" width="84" height="30"/>
+                                <rect key="frame" x="140" y="292" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stitch Video"/>
+                                <connections>
+                                    <segue destination="SrF-VX-lSd" kind="show" id="xYW-U3-Pbb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVZ-5u-eWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1532" y="0.0"/>
+            <point key="canvasLocation" x="1796" y="-319"/>
         </scene>
         <!--Merge Video View Controller-->
         <scene sceneID="dW9-rP-VVR">
@@ -79,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WwL-2H-FHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="36"/>
+            <point key="canvasLocation" x="1806" y="998"/>
         </scene>
         <!--Record Video View Controller-->
         <scene sceneID="FFh-3O-e68">
@@ -97,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iya-1L-Kyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="-7"/>
+            <point key="canvasLocation" x="2356" y="328"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tdk-wY-NKz">
