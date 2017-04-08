@@ -6,6 +6,8 @@
 	<string>$(StitchItVideoPlayRecord) uses videos and photos</string>
 	<key>NSCameraUsageDescription</key>
 	<string>$(StitchItVideoPlayRecord) camera use</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>$(StitchItVideoPlayRecord) microphone use</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
