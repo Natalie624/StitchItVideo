@@ -9,6 +9,8 @@
 import UIKit
 import MobileCoreServices
 import MediaPlayer
+import AVKit
+import AVFoundation
 
 class PlayVideoViewController: UIViewController {
 
@@ -63,6 +65,29 @@ class PlayVideoViewController: UIViewController {
 //The below extensions set up PlayVideoViewController to adopt the UIImagePickerControllerDelegate and UINavigationControllerDelevate protocols.
 //MARK: - UIImagePickerControlDelegate
 extension PlayVideoViewController: UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        //1
+        let mediaType = info[UIImagePickerControllerMediaType] as! NSString
+        
+        //2 dismisses the image picker (was dismissViewControllerAnimated)
+        dismiss(animated: true) {
+            
+            //3
+            if mediaType == kUTTypeMovie {
+                let videoURL = info[UIImagePickerControllerMediaURL] as! URL!
+                let player = AVPlayer(url: videoURL!)
+                let playerViewController = AVPlayerViewController()
+                playerViewController.player = player
+                self.present(playerViewController, animated: true) {
+                    playerViewController.player!.play()
+                }
+                
+                //let moviePlayer = MPMoviePlayerViewController(contentURL: info[UIImagePickerControllerMediaURL] as! NSURL)
+                //self
+            }
+        }
+    }
     
 }
 
