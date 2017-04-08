@@ -7,9 +7,34 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class RecordVideoViewController: UIViewController {
+    
+    func startCameraFromViewController(viewController: UIViewController, withDelegate delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> Bool {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) == false {
+            
+            return false
+        }
+        
+        let cameraController = UIImagePickerController()
+        cameraController.sourceType = .camera
+        cameraController.mediaTypes = [kUTTypeMovie as NSString as String]
+        cameraController.allowsEditing = false
+        cameraController.delegate = delegate
+        
+        present(cameraController, animated: true, completion: nil)
+        
+        return true
+    }
 
+    @IBAction func recordAndPlay(_ sender: UIButton) {
+        
+        _=startCameraFromViewController(viewController: self, withDelegate: self)
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +46,6 @@ class RecordVideoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -32,4 +56,12 @@ class RecordVideoViewController: UIViewController {
     }
     */
 
+}
+
+extension RecordVideoViewController: UIImagePickerControllerDelegate{
+    
+}
+
+extension RecordVideoViewController: UINavigationControllerDelegate {
+    
 }
