@@ -12,14 +12,14 @@ import MediaPlayer
 
 class PlayVideoViewController: UIViewController {
 
-    func startMediaBrowserFromViewController(viewController: UIViewController, usingDelegate delegate:UINavigationControllerDelegate & UIImagePickerControllerDelegate) -> Bool {
+    func startMediaBrowserFromViewController(viewController: UIViewController, usingDelegate delegate :UINavigationControllerDelegate & UIImagePickerControllerDelegate) -> Bool {
         //1
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) == false {
             return false
         }
         
         //2
-        var mediaUI = UIImagePickerController()
+        let mediaUI = UIImagePickerController()
         mediaUI.sourceType = .savedPhotosAlbum
         mediaUI.mediaTypes = [kUTTypeMovie as NSString as String]
         mediaUI.allowsEditing = true
@@ -30,8 +30,12 @@ class PlayVideoViewController: UIViewController {
         return true
     }
 
+//Below playVideo code ensures that tapping "PlayVideo" button will open the UIImagePickerController
+    
     @IBAction func playVideo(_ sender: Any) {
+        _=startMediaBrowserFromViewController(viewController: self, usingDelegate: self)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
