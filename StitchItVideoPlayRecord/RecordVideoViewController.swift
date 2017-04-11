@@ -55,10 +55,44 @@ class RecordVideoViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func video(videoPath: NSString, didFinishSavingWithError error: NSError?, contextInfo info: AnyObject) {
+        var title = "Success"
+        var message = "Video was saved"
+        if let _ = error {
+            title = "Error"
+            message = "Video failed to save"
+        }
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler:nil))
+        present(alert, animated:true, completion: nil)
+    }
 
 }
 
 extension RecordVideoViewController: UIImagePickerControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let mediaType = info[UIImagePickerControllerMediaType] as! NSString
+        dismiss(animated: true, completion: nil)
+        
+        //Handle a movie capture
+        if mediaType == kUTTypeMovie {
+            
+            guard let path = (info[UIImagePickerControllerMediaURL] as! NSURL).path else {
+                
+                return
+            }
+            
+            
+            if UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(path) {
+                
+                UISaveVideoAtPathToSavedPhotosAlbum(path, self, #selector(RecordVideoViewController.video(videoPath:didFinishSavingWithError:contextInfo:)),nil)
+            }
+        }
+    }
     
 }
 
