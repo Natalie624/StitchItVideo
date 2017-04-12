@@ -8,6 +8,10 @@
 	<string>$(StitchItVideoPlayRecord) camera use</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>$(StitchItVideoPlayRecord) microphone use</string>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>$(StitchItVideoPlayRecord) music use</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>$(StitchItVideoPlayRecord) media library usage</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
