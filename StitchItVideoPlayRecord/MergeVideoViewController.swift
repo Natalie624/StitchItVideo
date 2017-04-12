@@ -113,7 +113,31 @@ extension MergeVideoViewController: UINavigationControllerDelegate {
 }
 
 extension MergeVideoViewController: MPMediaPickerControllerDelegate {
-    
+    func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
+        let selectedSongs = mediaItemCollection.items
+        if selectedSongs.count > 0 {
+            let song = selectedSongs[0]
+            if let url = song.value(forProperty: MPMediaItemPropertyAssetURL) as? URL {
+                audioAsset = (AVAsset(url: url) )
+                dismiss(animated: true, completion: nil)
+                let alert = UIAlertController(title: "Asset loaded", message: "Audio Loaded", preferredStyle:.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alert, animated: true, completion: nil)
+            } else {
+                dismiss(animated:true, completion: nil)
+                let alert = UIAlertController(title: "Asset Not Available", message: "Audio Not Loaded", preferredStyle:.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alert, animated: true, completion: nil)
+            }
+        }else {
+            dismiss(animated: true, completion: nil)
+        }
+        
+        }
+    func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+
 }
 
 
