@@ -12,6 +12,7 @@ import MobileCoreServices
 import AssetsLibrary
 import MediaPlayer
 import CoreMedia
+import Photos
 
 class MergeVideoViewController: UIViewController {
     var firstAsset: AVAsset?
@@ -88,24 +89,24 @@ class MergeVideoViewController: UIViewController {
     func exportDidFinish(session: AVAssetExportSession) {
         if session.status == AVAssetExportSessionStatus.completed {
             let outputURL = session.outputURL
-            let library = ALAssetsLibrary()
-            if library.videoAtPathIs(compatibleWithSavedPhotosAlbum: outputURL) {
-                //issues
-                library.writeVideoAtPathToSavedPhotosAlbum(outputURL, completionBlock: (assetURL:NSURL, error: NSError!) -> Void in
-                    var title = ""
-                    var message = ""
-                    if error != nil {
-                        title = "Error"
-                        message = "Failed to save video"
-                    } else {
-                        title = "Success"
-                        message = "Video Saved"
-                    }
-                    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
-                    self.presentedViewController(alert, animated: true, completion: nil)
-                    })
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: outputURL!)
+            }) { completed, error in
+               var title = ""
+               var message = ""
+                if completed {
+                  title = "Success"
+                message = "Video Saved"
+                } else {
+                   title = "Error"
+                   message = "Failed to save video"
+                    
+                }
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
+            
         }
         activityMonitor.stopAnimating()
         firstAsset = nil
@@ -113,10 +114,11 @@ class MergeVideoViewController: UIViewController {
         audioAsset = nil
     }
     
-}
+    
+    
+}//Closing bracket for class
 
-
-extension MergeVideoViewController : UIImagePickerControllerDelegate {
+extension MergeVideoViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString
         dismiss(animated: true, completion: nil)
