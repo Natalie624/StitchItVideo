@@ -83,8 +83,38 @@ class MergeVideoViewController: UIViewController {
     
     @IBAction func stitchIt(_ sender: AnyObject) {
     }
+ 
+    //completion handler to export the final video to the photos album
+    func exportDidFinish(session: AVAssetExportSession) {
+        if session.status == AVAssetExportSessionStatus.completed {
+            let outputURL = session.outputURL
+            let library = ALAssetsLibrary()
+            if library.videoAtPathIs(compatibleWithSavedPhotosAlbum: outputURL) {
+                //issues
+                library.writeVideoAtPathToSavedPhotosAlbum(outputURL, completionBlock: (assetURL:NSURL, error: NSError!) -> Void in
+                    var title = ""
+                    var message = ""
+                    if error != nil {
+                        title = "Error"
+                        message = "Failed to save video"
+                    } else {
+                        title = "Success"
+                        message = "Video Saved"
+                    }
+                    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+                    self.presentedViewController(alert, animated: true, completion: nil)
+                    })
+            }
+        }
+        activityMonitor.stopAnimating()
+        firstAsset = nil
+        secondAsset = nil
+        audioAsset = nil
+    }
     
 }
+
 
 extension MergeVideoViewController : UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
