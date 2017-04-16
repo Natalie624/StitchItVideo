@@ -20,9 +20,12 @@ class MergeVideoViewController: UIViewController {
     var audioAsset: AVAsset?
     var loadingAssetOne = false
     
-    @IBOutlet var activityMonitor: UIActivityIndicatorView!
+    @IBOutlet var activityMonitor: UIActivityIndicatorView?
     
     override func viewDidLoad() {
+        activityMonitor?.hidesWhenStopped = true;
+        activityMonitor?.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        activityMonitor?.center = view.center
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -82,7 +85,69 @@ class MergeVideoViewController: UIViewController {
         
     }
     
+    
+    //Stitch function
+    
     @IBAction func stitchIt(_ sender: AnyObject) {
+        if let firstAsset = firstAsset, let secondAsset = secondAsset {
+        
+            activityMonitor?.startAnimating()
+            
+            
+            //1 - create AVMutableComposition object. This object will hold your AVMutableCompositionTrack instances
+            let mixComposition = AVMutableComposition()
+            
+            //2 - Video track with first and second asset
+            let firstTrack = mixComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
+            do {
+                try firstTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), of: firstAsset.tracks(withMediaType: AVMediaTypeVideo)[0], at: kCMTimeZero)
+            } catch _ {
+                print("Failed to load first track")
+            }
+            let secondTrack = mixComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
+            do {
+                try secondTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, secondAsset.duration), of: secondAsset.tracks(withMediaType: AVMediaTypeVideo)[0], at: firstAsset.duration)
+            } catch _ {
+                print("Failed to load second track")
+            }
+            //3 - Audio track
+            if let loadedAudioAsset = audioAsset {
+                let audioTrack = mixComposition.addMutableTrack(withMediaType: AVMediaTypeAudio, preferredTrackID: 0)
+                do {
+                    try audioTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, CMTimeAdd(firstAsset.duration, secondAsset.duration)),
+                        of: loadedAudioAsset.tracks(withMediaType: AVMediaTypeAudio)[0], at: kCMTimeZero)
+                }catch _ {
+                    print("Failed to load audio track")
+                    
+                }
+            }
+            //4 - Get path
+            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .long
+            dateFormatter.timeStyle = .short
+            let dNow = NSDate()
+            let date = dateFormatter.string(from: dNow as Date)
+            let savePath = (documentDirectory as NSString).appendingPathComponent("mergeVideo-\(date).mov")
+            let url = URL(fileURLWithPath: savePath)
+            
+            //5 - Create Exporter
+            guard let exporter = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)
+                else {
+                    return
+            }
+            exporter.outputURL = url
+            exporter.outputFileType = AVFileTypeQuickTimeMovie
+            exporter.shouldOptimizeForNetworkUse = true
+            
+            //6 - Perform the export
+            exporter.exportAsynchronously() {
+                DispatchQueue.main.async() { _ in
+                    self.exportDidFinish(session: exporter)
+            }
+            
+            }
+        }
     }
  
     //completion handler to export the final video to the photos album
@@ -94,12 +159,12 @@ class MergeVideoViewController: UIViewController {
             }) { completed, error in
                var title = ""
                var message = ""
-                if completed {
-                  title = "Success"
-                message = "Video Saved"
+                if error != nil {
+                  title = "Error"
+                message = "Failed to save video"
                 } else {
-                   title = "Error"
-                   message = "Failed to save video"
+                   title = "Success"
+                   message = "Video saved"
                     
                 }
                 let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -108,7 +173,7 @@ class MergeVideoViewController: UIViewController {
             }
             
         }
-        activityMonitor.stopAnimating()
+        activityMonitor?.stopAnimating()
         firstAsset = nil
         secondAsset = nil
         audioAsset = nil
