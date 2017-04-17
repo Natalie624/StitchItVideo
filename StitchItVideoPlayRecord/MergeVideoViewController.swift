@@ -243,7 +243,7 @@ class MergeVideoViewController: UIViewController, UIImagePickerControllerDelegat
                     return
             }
             exporter.outputURL = url
-            exporter.outputFileType = AVFileTypeQuickTimeMovie
+            exporter.outputFileType = AVFileTypeMPEG4
             exporter.shouldOptimizeForNetworkUse = true
             exporter.videoComposition = mainComposition
             
@@ -279,7 +279,7 @@ class MergeVideoViewController: UIViewController, UIImagePickerControllerDelegat
             present(alert, animated: true, completion: nil)
         }
     }
- }//Closing bracket for class
+ }
 
 
     
