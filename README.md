@@ -32,9 +32,7 @@
 * You can also play the stitched video directly from your Photo Library. 
 
 * Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* 
 
 ### Known Issues ###
 
