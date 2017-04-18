@@ -42,6 +42,7 @@
 * Activity indicator is not working
 * Some stitched videos make take a while to complete after hitting "StitchIt" depending on the length of the recorded videos. 
 * No Android support 
+* iOS 10.3.1 or latest version must be installed
 
 
 ### Who do I talk to? ###
