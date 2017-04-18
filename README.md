@@ -9,14 +9,15 @@
 
 ### Usage Guide ###
 
-* After launching StitchIt, select "Record and Save Video/ Record Video" to record a 10 second video (though you won't be restricted if you take a longer one)
+* After launching StitchIt, select "Record and Save Video" then "Record Video" to record a 10-second video (though you won't be restricted if you take a longer one)
 * After you are done recording select "use video"
 * You should see a message displayed "Success, Video was saved"
 * Select "OK" and select "Record Video" again to take a second video - or alternatively have a friend take a video and send it to you. 
 * Hit the back button to the main screen and select "Stitch Video"
-* Select "Load Asset 1" and choose the video you recorded.
+* Select "Load Asset 1" and choose the video you recorded from your photo library.
 * Hit "Choose" and you should see a message - "Asset Loaded - Video one loaded."
 * Select "OK" and "Load asset 2"
+* Select a second video from your photo library (either a second one you recorded or one sent by a friend that you saved to your photo library)
 * Hit "Choose" and you should see a second message stating "Asset Loaded - Video two loaded"
 * Select "Load Audio" 
 * Your Audio library will launch. 
